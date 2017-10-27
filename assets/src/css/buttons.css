@@ -1,0 +1,49 @@
+/*
+=======================================================
+BUTTONS
+=======================================================
+1. Base Styles
+2. Outline Buttons
+=======================================================
+*/
+
+/*
+-------------------------------------------------------
+1. Base Styles
+-------------------------------------------------------
+*/
+
+.btn {
+  background-color: #007bff;
+  border: solid 2px #007bff;
+  border-radius: 4px;
+  display: inline-block;
+  height: 2.7em;
+  width: auto;
+  padding: 0 1em;
+  line-height: 2.5;
+  vertical-align: middle;
+  white-space: normal;
+}
+
+.btn:hover,
+.btn:focus,
+.btn:not(.btn-outline) {
+  color: #fff;
+}
+
+.btn:focus,
+.btn:hover {
+  background-color: #0069d9;
+  border-color: #0069d9;
+}
+
+/*
+-------------------------------------------------------
+2. Outline Buttons
+-------------------------------------------------------
+*/
+
+.btn-outline:not(:hover):not(:focus) {
+  background-color: transparent;
+}

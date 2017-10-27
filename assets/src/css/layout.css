@@ -1,0 +1,56 @@
+/*
+=======================================================
+LAYOUT
+=======================================================
+1. Background Colors
+2. Hero Image
+=======================================================
+*/
+
+/*
+-------------------------------------------------------
+1. Background Colors
+-------------------------------------------------------
+*/
+
+.bg-main {
+  background-color: #343a40;
+}
+
+.bg-white {
+  background-color: #fff;
+}
+
+hr,
+.bg-grey {
+  background-color: #afafaf;
+}
+
+.bg-grey-light {
+  background-color: #e3e3e3;
+}
+
+.bg-grey-dark {
+  background-color: #222;
+}
+
+.bg-image,
+.hero-image {
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.bg-none {
+  background-color: transparent;
+}
+
+/*
+-------------------------------------------------------
+2. Hero Image
+-------------------------------------------------------
+*/
+
+.hero-image .row {
+  height: 65vh;
+}
