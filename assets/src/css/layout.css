@@ -3,7 +3,8 @@
 LAYOUT
 =======================================================
 1. Background Colors
-2. Hero Image
+2. Header
+3. Hero Image
 =======================================================
 */
 
@@ -14,28 +15,24 @@ LAYOUT
 */
 
 .bg-main {
-  background-color: #343a40;
+  background-color: #a2ca28;
 }
 
-.bg-white {
+.bg-alt {
+  background-color: #fd634e;
+}
+
+.bg-light {
   background-color: #fff;
 }
 
-hr,
-.bg-grey {
-  background-color: #afafaf;
-}
-
-.bg-grey-light {
-  background-color: #e3e3e3;
-}
-
-.bg-grey-dark {
-  background-color: #222;
+.bg-dark {
+  background-color: #656e74;
 }
 
 .bg-image,
-.hero-image {
+.hero-image,
+.hero-image-cover {
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -47,10 +44,77 @@ hr,
 
 /*
 -------------------------------------------------------
-2. Hero Image
+2. Header
 -------------------------------------------------------
 */
 
+.logo {
+  font-size: 1.55em;
+}
+
+.logo img,
+.logo span {
+  vertical-align: top;
+}
+
+.logo img {
+  margin-right: 6px;
+}
+
+.logo span::after {
+  content: '';
+  height: 3px;
+  width: 34px;
+  display: block;
+  background-color: #a2ca28;
+}
+
+.header,
+.hero-image {
+  letter-spacing: 2px;
+}
+
+@media only screen and (min-width: 769px) {
+  .header a {
+    transition: color 0.2s;
+  }
+}
+
+/*
+-------------------------------------------------------
+3. Hero Image
+-------------------------------------------------------
+*/
+
+.hero-image {
+  position: relative;
+  overflow: hidden;
+  z-index: -1;
+}
+
 .hero-image .row {
-  height: 65vh;
+  height: 100vh;
+  padding-bottom: 6em;
+}
+
+@media only screen and (min-width: 769px) {
+  .hero-image p {
+    margin-left: 11.25em;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .hero-image h1 {
+    font-size: 2em;
+  }
+}
+
+.hero-image-cover {
+  background-image: url('../../dist/svg/hero-image-cover.svg');
+  position: absolute;
+  height: 6.55em;
+  opacity: 0.3;
+  bottom: 0;
+  right: 0;
+  left: 0;
 }

@@ -51,3 +51,7 @@ select:focus {
 button {
   background-color: transparent;
 }
+
+hr {
+  background-color: #afafaf;
+}

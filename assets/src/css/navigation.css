@@ -17,6 +17,7 @@ MAIN NAVIGATION
 
 .main-nav {
   text-align: right;
+  font-size: 0.8em;
 }
 
 .main-nav a,
@@ -58,7 +59,7 @@ MAIN NAVIGATION
 
   .main-nav .menu > .menu-item {
     display: inline-block;
-    margin-left: 1.5em;
+    margin-left: 2.5em;
   }
 
   .main-nav .menu > .menu-item-has-children > a {
@@ -69,7 +70,7 @@ MAIN NAVIGATION
   .menu-item-is-active > a,
   .main-nav .menu-item > a:focus,
   .main-nav .menu-item:hover > a {
-    color: #afafaf;
+    color: #a2ca28;
   }
 
   .main-nav .sub-menu {
@@ -138,6 +139,7 @@ MAIN NAVIGATION
 
   .main-nav {
     z-index: 1;
+    font-size: 1em;
     position: relative;
   }
 
@@ -153,7 +155,6 @@ MAIN NAVIGATION
     overflow-x: hidden;
     visibility: hidden;
     background-color: #fff;
-    text-transform: uppercase;
   }
 
   .main-nav-is-active > .menu {

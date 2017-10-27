@@ -2,7 +2,7 @@
 =======================================================
 Typography
 =======================================================
-1. Font Family/Height
+1. Font Face
 2. Font Size
 3. Font Color
 4. Misc/Effects
@@ -11,17 +11,112 @@ Typography
 
 /*
 -------------------------------------------------------
-1. Font Family/Height
+1. Font Face
 -------------------------------------------------------
 */
+
+@font-face {
+  font-family: 'Open Sans Regular';
+  src: url('../fonts/open-sans/open-sans-regular.eot');
+  src:
+    url('../fonts/open-sans/open-sans-regular.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/open-sans/open-sans-regular.woff2') format('woff2'),
+    url('../fonts/open-sans/open-sans-regular.woff') format('woff'),
+    url('../fonts/open-sans/open-sans-regular.svg#open-sans-regular') format('svg');
+  font-weight: 400;
+  font-style: normal;
+  font-stretch: normal;
+  unicode-range: U+0020-2212;
+}
+
+@font-face {
+  font-family: 'Open Sans SemiBold';
+  src: url('../fonts/open-sans/open-sans-semi-bold.eot');
+  src:
+    url('../fonts/open-sans/open-sans-semi-bold.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/open-sans/open-sans-semi-bold.woff2') format('woff2'),
+    url('../fonts/open-sans/open-sans-semi-bold.woff') format('woff'),
+    url('../fonts/open-sans/open-sans-semi-bold.svg#open-sans-semi-bold') format('svg');
+  font-weight: 600;
+  font-style: normal;
+  font-stretch: normal;
+  unicode-range: U+0020-2074;
+}
+
+@font-face {
+  font-family: 'Avenir Next Rounded Pro';
+  src: url('../fonts/avenir/AvenirNextRoundedPro-Demi.eot');
+  src:
+    url('../fonts/avenir/AvenirNextRoundedPro-Demi.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/avenir/AvenirNextRoundedPro-Demi.woff2') format('woff2'),
+    url('../fonts/avenir/AvenirNextRoundedPro-Demi.woff') format('woff'),
+    url('../fonts/avenir/AvenirNextRoundedPro-Demi.svg#AvenirNextRoundedPro-Demi') format('svg');
+  font-weight: 600;
+  font-style: normal;
+  font-stretch: normal;
+  unicode-range: U+0-10FFFF;
+}
+
+@font-face {
+  font-family: 'Avenir Next Rounded Pro Medium';
+  src: url('../fonts/avenir/AvenirNextRoundedPro-Med.eot');
+  src:
+    url('../fonts/avenir/AvenirNextRoundedPro-Med.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/avenir/AvenirNextRoundedPro-Med.woff2') format('woff2'),
+    url('../fonts/avenir/AvenirNextRoundedPro-Med.woff') format('woff'),
+    url('../fonts/avenir/AvenirNextRoundedPro-Med.svg#AvenirNextRoundedPro-Med') format('svg');
+  font-weight: 500;
+  font-style: normal;
+  font-stretch: normal;
+  unicode-range: U+0-10FFFF;
+}
+
+@font-face {
+  font-family: 'Avenir Next Rounded Pro Regular';
+  src: url('../fonts/avenir/AvenirNextRoundedPro-Reg.eot');
+  src:
+    url('../fonts/avenir/AvenirNextRoundedPro-Reg.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/avenir/AvenirNextRoundedPro-Reg.woff2') format('woff2'),
+    url('../fonts/avenir/AvenirNextRoundedPro-Reg.woff') format('woff'),
+    url('../fonts/avenir/AvenirNextRoundedPro-Reg.svg#AvenirNextRoundedPro-Reg') format('svg');
+  font-weight: 400;
+  font-style: normal;
+  font-stretch: normal;
+  unicode-range: U+0-10FFFF;
+}
+
+.logo,
+.font-alt {
+  font-family: 'Avenir Next Rounded Pro';
+  letter-spacing: 2px;
+  font-weight: 600;
+}
+
+.main-nav,
+.font-alt-light {
+  font-family: 'Avenir Next Rounded Pro Medium';
+  font-weight: 500;
+}
+
+.font-alt-regular {
+  font-family: 'Avenir Next Rounded Pro Regular';
+  letter-spacing: 2px;
+  font-weight: 400;
+}
 
 .btn,
 body,
 input,
 select,
-textarea {
-  font-family: 'Roboto', sans-serif;
+textarea,
+.font-main {
+  font-family: 'Open Sans Regular';
   font-weight: 400;
+}
+
+.font-main-bold {
+  font-family: 'Open Sans SemiBold';
+  font-weight: 600;
 }
 
 h1,
@@ -104,7 +199,19 @@ body {
   color: #222;
 }
 
-.text-white {
+.text-main {
+  color: #a2ca28;
+}
+
+.text-alt {
+  color: #fd634e;
+}
+
+.text-dark {
+  color: #656e74;
+}
+
+.text-light {
   color: #fff;
 }
 
