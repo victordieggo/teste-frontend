@@ -18,9 +18,17 @@ GRID
 -------------------------------------------------------
 */
 
+.wrapper,
+.wrapper-large {
+  margin: 0 auto;
+}
+
 .wrapper {
   max-width: 1240px;
-  margin: 0 auto;
+}
+
+.wrapper-large {
+  max-width: 1480px;
 }
 
 /*
