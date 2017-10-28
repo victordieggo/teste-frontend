@@ -5,6 +5,9 @@ LAYOUT
 1. Background Colors
 2. Header
 3. Hero Image
+4. Features
+5. Variable Content
+6. Footer
 =======================================================
 */
 
@@ -47,27 +50,6 @@ LAYOUT
 2. Header
 -------------------------------------------------------
 */
-
-.logo {
-  font-size: 1.55em;
-}
-
-.logo img,
-.logo span {
-  vertical-align: top;
-}
-
-.logo img {
-  margin-right: 6px;
-}
-
-.logo span::after {
-  content: '';
-  height: 3px;
-  width: 34px;
-  display: block;
-  background-color: #a2ca28;
-}
 
 .header,
 .hero-image {
@@ -118,3 +100,46 @@ LAYOUT
   right: 0;
   left: 0;
 }
+
+/*
+-------------------------------------------------------
+4. Features
+-------------------------------------------------------
+*/
+
+.features {
+  padding: 3.5em 0;
+}
+
+/*
+-------------------------------------------------------
+5. Variable Content
+-------------------------------------------------------
+*/
+
+.variable-content > .row,
+.variable-content > .row > .col-12 {
+  padding: 0 0.7em;
+}
+
+.variable-content .col-4,
+.variable-content .col-8,
+.variable-content-thumbnail {
+  min-height: 23em;
+}
+
+.floating-content-bottom-left {
+  left: 0;
+  bottom: 0;
+}
+
+.floating-content-bottom-right {
+  right: 0;
+  bottom: 0;
+}
+
+/*
+-------------------------------------------------------
+6. Footer
+-------------------------------------------------------
+*/
