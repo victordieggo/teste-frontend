@@ -123,9 +123,9 @@ LAYOUT
   padding: 0 0.7em;
 }
 
-.vcontent .col-4,
-.vcontent .col-8,
-.vcontent-thumb {
+.vcontent-thumb,
+.vcontent-small,
+.vcontent-large {
   min-height: 23em;
 }
 

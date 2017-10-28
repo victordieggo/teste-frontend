@@ -70,7 +70,9 @@ GRID
   align-self: flex-end;
 }
 
-.col-stretch {
+.col-stretch,
+.vcontent-small,
+.vcontent-large {
   -webkit-align-self: stretch;
   align-self: stretch;
 }
@@ -93,7 +95,8 @@ GRID
   width: 25%;
 }
 
-.col-4 {
+.col-4,
+.vcontent-small {
   width: 33.3333333333333%;
 }
 
@@ -109,7 +112,8 @@ GRID
   width: 58.3333333333333%;
 }
 
-.col-8 {
+.col-8,
+.vcontent-large {
   width: 66.66666666666666%;
 }
 
@@ -152,7 +156,8 @@ GRID
     width: 33.3333333333333%;
   }
 
-  .md-5 {
+  .md-5,
+  .vcontent-small {
     width: 41.66666666666667%;
   }
 
@@ -160,7 +165,8 @@ GRID
     width: 50%;
   }
 
-  .md-7 {
+  .md-7,
+  .vcontent-large {
     width: 58.3333333333333%;
   }
 
@@ -236,7 +242,9 @@ GRID
     width: 91.66666666666666%;
   }
 
-  .sm-12 {
+  .sm-12,
+  .vcontent-small,
+  .vcontent-large {
     width: 100%;
   }
 }
