@@ -35,7 +35,8 @@ LAYOUT
 
 .bg-image,
 .hero-image,
-.hero-image-cover {
+.hero-image-cover,
+.vcontent-thumb {
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -117,15 +118,36 @@ LAYOUT
 -------------------------------------------------------
 */
 
-.variable-content > .row,
-.variable-content > .row > .col-12 {
+.vcontent > .row,
+.vcontent > .row > .col-12 {
   padding: 0 0.7em;
 }
 
-.variable-content .col-4,
-.variable-content .col-8,
-.variable-content-thumbnail {
+.vcontent .col-4,
+.vcontent .col-8,
+.vcontent-thumb {
   min-height: 23em;
+}
+
+.vcontent-thumb {
+  position: relative;
+}
+
+.floating-content-top-left,
+.floating-content-top-right,
+.floating-content-bottom-left,
+.floating-content-bottom-right {
+  position: absolute;
+}
+
+.floating-content-top-left {
+  top: 0;
+  left: 0;
+}
+
+.floating-content-top-right {
+  top: 0;
+  right: 0;
 }
 
 .floating-content-bottom-left {
