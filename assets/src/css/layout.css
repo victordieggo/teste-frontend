@@ -94,7 +94,7 @@ LAYOUT
 }
 
 .hero-image-cover {
-  background-image: url('../../dist/svg/hero-image-cover.svg');
+  background-image: url('../../dist/img/hero-image-cover.png');
   position: absolute;
   height: 6.55em;
   opacity: 0.3;
@@ -174,7 +174,7 @@ LAYOUT
 .banner-divider {
   height: 250px;
   margin: -75px 0;
-  background-image: url('../../dist/svg/bg-banner-divider.svg');
+  background-image: url('../../dist/img/bg-banner-divider.png');
 }
 
 .banner-divider::before {
