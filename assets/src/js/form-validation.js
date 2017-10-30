@@ -73,20 +73,24 @@
             sucessMessage = 'Thank you <strong>' + name.value + '</strong>, you successfully joined our mailing list using the email <strong>' + email.value + '</strong>.';
             body.querySelector(':focus').blur();
             form.classList.add('form-sucess');
-            form.reset();
 
             submit = form.querySelector('[type="submit"]');
-            submit.disabled = true;
+            Array.prototype.forEach.call([name, email, submit], function (element) {
+                element.disabled = true;
+            });
 
             setTimeout(function () {
                 form.classList.remove('form-sucess');
                 sucess = document.createElement('p');
-                sucess.className = 'text-block text-light text-small spacer-top-10 sucess-message';
+                sucess.className = 'text-block text-light text-small spacer-top-10 sucess-message align-center';
                 sucess.innerHTML = sucessMessage;
                 form.appendChild(sucess);
                 setTimeout(function () {
+                    Array.prototype.forEach.call([name, email, submit], function (element) {
+                        element.disabled = false;
+                    });
                     form.removeChild(sucess);
-                    submit.disabled = false;
+                    form.reset();
                 }, 17000);
             }, 1000);
 

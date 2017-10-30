@@ -32,8 +32,8 @@ BUTTONS
   color: #fff;
 }
 
-.btn:focus,
-.btn:hover {
+.btn:focus:not(:disabled),
+.btn:hover:not(:disabled) {
   background-color: #8db514;
   border-color: #8db514;
 }

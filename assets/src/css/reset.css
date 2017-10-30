@@ -55,3 +55,8 @@ button {
 hr {
   background-color: #afafaf;
 }
+
+:disabled,
+:disabled:hover {
+  opacity: 0.9;
+}
