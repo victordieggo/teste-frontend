@@ -337,18 +337,21 @@
           </a>
         </div>
         <div class="col-8 md-12">
-          <form action="index.html" method="post">
+          <form id="newsletter-form" class="newsletter-form" action="" method="post">
             <div class="row no-gutter">
               <div class="col-4 xs-12">
-                <input type="text" name="name" placeholder="Your Name" required>
-                <div class="show-sm pad-05"></div>
+                <input type="text" name="name" placeholder="Your Name">
               </div>
               <div class="col-5 xs-12">
-                <input type="email" name="email" placeholder="Your Email" required>
-                <div class="show-sm pad-05"></div>
+                <input type="text" name="email" placeholder="Your Email">
               </div>
               <div class="col-3 xs-12">
-                <input class="btn full-width" type="submit" name="submit" value="Join Newsletter">
+                <button class="btn full-width" type="submit" name="submit">
+                  Join Newsletter
+                  <svg class="vcenter" width="11" height="11" viewBox="0 0 24 28">
+                    <path fill="#fff" d="M11.203 21.797l7.094-7.094c0.391-0.391 0.391-1.016 0-1.406l-7.094-7.094c-0.391-0.391-1.016-0.391-1.406 0l-1.594 1.594c-0.391 0.391-0.391 1.016 0 1.406l4.797 4.797-4.797 4.797c-0.391 0.391-0.391 1.016 0 1.406l1.594 1.594c0.391 0.391 1.016 0.391 1.406 0zM24 14c0 6.625-5.375 12-12 12s-12-5.375-12-12 5.375-12 12-12 12 5.375 12 12z"/>
+                  </svg>
+                </button>
               </div>
             </div>
           </form>

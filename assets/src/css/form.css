@@ -5,6 +5,7 @@ Form Elements
 1. Base Styles
 2. Custom Select Arrow
 3. Custom Checkbox/Radio
+4. Form Validation
 =======================================================
 */
 
@@ -34,7 +35,7 @@ textarea {
 
 select,
 input:not(.btn) {
-  height: 3.2em;
+  height: 3.4em;
   padding: 0 1em;
 }
 
@@ -113,4 +114,18 @@ input[type=checkbox] {
 :checked + .label-radio::before {
   background: url('../../dist/svg/icon-circle.svg') no-repeat top;
   background-size: 34% 100%;
+}
+
+/*
+-------------------------------------------------------
+4. Form Validation
+-------------------------------------------------------
+*/
+
+.input-error > input {
+  border-color: red !important;
+}
+
+.input-error > p {
+  color: red;
 }
