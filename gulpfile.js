@@ -8,6 +8,7 @@
 var gulp        = require('gulp'),
     concat      = require('gulp-concat'),
     cssmin      = require('gulp-cssmin'),
+    cssSvg      = require('gulp-css-svg'),
     uglify      = require('gulp-uglify'),
     combineMq   = require('gulp-combine-mq'),
     browserSync = require('browser-sync').create(),
@@ -42,6 +43,7 @@ gulp.task('css', function () {
         .pipe(concat('style.css'))
         .pipe(combineMq())
         .pipe(cssmin())
+        .pipe(cssSvg())
         .pipe(gulp.dest(distPath.css))
         .pipe(browserSync.stream());
 });
