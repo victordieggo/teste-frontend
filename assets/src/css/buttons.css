@@ -16,7 +16,7 @@ BUTTONS
 .btn {
   background-color: #a2ca28;
   border: solid 2px #a2ca28;
-  border-radius: 4px;
+  border-radius: 3px;
   display: inline-block;
   height: 3.2em;
   width: auto;
@@ -34,8 +34,8 @@ BUTTONS
 
 .btn:focus,
 .btn:hover {
-  background-color: #0069d9;
-  border-color: #0069d9;
+  background-color: #8db514;
+  border-color: #8db514;
 }
 
 /*
