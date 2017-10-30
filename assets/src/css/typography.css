@@ -113,19 +113,17 @@ h6 {
 -------------------------------------------------------
 */
 
-.btn,
-body,
-input,
-select,
-textarea {
+body {
   font-size: 1em;
 }
 
+.btn,
 small,
-.btn-small,
-.text-small,
-.input-small {
-  font-size: 0.9em;
+input,
+select,
+textarea,
+.text-small {
+  font-size: 0.85em;
 }
 
 h6,
@@ -135,10 +133,7 @@ blockquote {
 }
 
 h5,
-.title-5,
-.btn-large,
-.text-large,
-.input-large {
+.title-5 {
   font-size: 1.3em;
 }
 
@@ -210,7 +205,6 @@ blockquote,
   line-height: 170%;
 }
 
-.btn,
 .align-center {
   text-align: center;
 }

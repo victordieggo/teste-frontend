@@ -14,14 +14,14 @@ BUTTONS
 */
 
 .btn {
-  background-color: #007bff;
-  border: solid 2px #007bff;
+  background-color: #a2ca28;
+  border: solid 2px #a2ca28;
   border-radius: 4px;
   display: inline-block;
-  height: 2.7em;
+  height: 3.2em;
   width: auto;
   padding: 0 1em;
-  line-height: 2.5;
+  line-height: 3;
   vertical-align: middle;
   white-space: normal;
 }
