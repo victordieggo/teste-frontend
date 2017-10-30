@@ -61,6 +61,7 @@ LAYOUT
 
 @media only screen and (min-width: 769px) {
   .header a {
+    -webkit-transition: color 0.2s;
     transition: color 0.2s;
   }
 }
@@ -208,7 +209,7 @@ LAYOUT
 
 .footer {
   background-color: #0d1119;
-  padding: 2em;
+  padding: 2em 0;
 }
 
 .social-icon {
@@ -258,6 +259,7 @@ LAYOUT
 
 .form-sucess::after {
   width: 100%;
+  -webkit-transition: width 1s;
   transition: width 1s;
 }
 

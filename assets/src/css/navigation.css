@@ -118,12 +118,22 @@ MAIN NAVIGATION
 
 .nav-btn {
   background: url('../../dist/svg/icon-menu.svg') no-repeat center;
+  -webkit-transform: none;
+  -moz-transform: none;
+  -ms-transform: none;
+  -o-transform: none;
+  transform: none;
   height: 1.5em;
   width: 1.5em;
 }
 
 .main-nav-is-active .nav-btn {
   background-image: url('../../dist/svg/icon-close.svg');
+  -webkit-transform: rotateZ(180deg);
+  -moz-transform: rotateZ(180deg);
+  -ms-transform: rotateZ(180deg);
+  -o-transform: rotateZ(180deg);
+  transform: rotateZ(180deg);
 }
 
 /*
