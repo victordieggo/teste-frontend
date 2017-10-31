@@ -254,6 +254,7 @@ LAYOUT
   height: 3px;
   content: '';
   display: block;
+  border-radius: 1em;
   margin-top: 0.5em;
 }
 

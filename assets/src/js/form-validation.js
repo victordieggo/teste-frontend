@@ -10,49 +10,49 @@
     var body = document.body,
         form = body.querySelector('#newsletter-form');
 
-    function inputError(element, errorMessage) {
-        var parent, error;
+    function inputError(element, message) {
+        var parent, notice;
         parent = element.parentElement;
         parent.classList.add('input-error');
-        error = parent.querySelector('.error-message');
-        if (error === null) {
-            error = document.createElement('p');
-            error.className = 'text-small error-message spacer-top-05';
-            error.innerHTML = errorMessage;
-            parent.appendChild(error);
-        } else {
-            error.innerHTML = errorMessage;
+        notice = parent.querySelector('.notice-error');
+        if (notice === null) {
+            notice = document.createElement('p');
+            notice.className = 'notice notice-error';
+            parent.appendChild(notice);
         }
+        notice.innerHTML = message;
     }
 
     function inputValid(element) {
-        var parent, error;
+        var parent, notice;
         parent = element.parentElement;
         parent.classList.remove('input-error');
-        error = parent.querySelector('.error-message');
-        if (error !== null) {
-            parent.removeChild(error);
+        notice = parent.querySelector('.notice-error');
+        if (notice !== null) {
+            parent.removeChild(notice);
         }
     }
 
     function validateEmail(email) {
-        var regex = /\b[A-Z0-9\-]+@(?:[A-Z0-9\-]+\.)+[A-Z]{2,20}\b/gi,
-            validation;
+        var regex = /\b[A-Z0-9\-]+@(?:[A-Z0-9\-]+\.)+[A-Z]{2,20}\b/gi;
         if (regex.test(email)) {
-            validation = true;
-        } else {
-            validation = false;
+            return true;
         }
-        return validation;
+        return false;
+    }
+
+    function disableForm(option) {
+        var elements = form.querySelectorAll('input, button');
+        Array.prototype.forEach.call(elements, function (element) {
+            element.disabled = option;
+        });
     }
 
     form.addEventListener('submit', function (event) {
         event.preventDefault();
         var name = form.querySelector('input[name=name]'),
             email = form.querySelector('input[name=email]'),
-            submit,
-            sucess,
-            sucessMessage;
+            sucess;
 
         Array.prototype.forEach.call([name, email], function (input) {
             if (input.value === '' || input.value === null) {
@@ -69,32 +69,23 @@
         });
 
         if (!form.querySelector('.input-error') && !form.querySelector('.sucess-message')) {
-
-            sucessMessage = 'Thank you <strong>' + name.value + '</strong>, you successfully joined our mailing list using the email <strong>' + email.value + '</strong>.';
             body.querySelector(':focus').blur();
             form.classList.add('form-sucess');
-
-            submit = form.querySelector('[type="submit"]');
-            Array.prototype.forEach.call([name, email, submit], function (element) {
-                element.disabled = true;
-            });
-
+            disableForm(true);
             setTimeout(function () {
                 form.classList.remove('form-sucess');
                 sucess = document.createElement('p');
-                sucess.className = 'text-block text-light text-small spacer-top-10 sucess-message align-center';
-                sucess.innerHTML = sucessMessage;
+                sucess.className = 'notice notice-sucess';
+                sucess.innerHTML = 'Thank you ' + name.value + ', you successfully joined our newsletter.';
                 form.appendChild(sucess);
                 setTimeout(function () {
-                    Array.prototype.forEach.call([name, email, submit], function (element) {
-                        element.disabled = false;
-                    });
+                    disableForm(false);
                     form.removeChild(sucess);
                     form.reset();
-                }, 17000);
+                }, 5000);
             }, 1000);
-
         }
+
     });
 
 }());
