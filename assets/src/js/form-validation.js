@@ -65,7 +65,7 @@
 
         Array.prototype.forEach.call([name, email], function (input) {
             if (input.value.length === 0) {
-                inputError(input, "'" + input.name + "' is required field.");
+                inputError(input, "'" + input.name + "' is a required field.");
                 form.querySelector('.input-error input').focus();
                 return;
             }
