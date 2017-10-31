@@ -33,6 +33,15 @@
         }
     }
 
+    function validateName(name) {
+        name = name.replace(/ /g, '');
+        var regex = /^[a-záàâãéèêíïóôõöúçñ ]+$/i;
+        if (regex.test(name)) {
+            return true;
+        }
+        return false;
+    }
+
     function validateEmail(email) {
         var regex = /\b[A-Z0-9\-]+@(?:[A-Z0-9\-]+\.)+[A-Z]{2,20}\b/gi;
         if (regex.test(email)) {
@@ -55,13 +64,18 @@
             sucess;
 
         Array.prototype.forEach.call([name, email], function (input) {
-            if (input.value === '' || input.value === null) {
-                inputError(input, 'This field is required.');
+            if (input.value.length === 0) {
+                inputError(input, "'" + input.name + "' is required field.");
+                form.querySelector('.input-error input').focus();
+                return;
+            }
+            if (input.name === 'name' && validateName(input.value) === false) {
+                inputError(input, 'Please enter your name.');
                 form.querySelector('.input-error input').focus();
                 return;
             }
             if (input.name === 'email' && validateEmail(input.value) === false) {
-                inputError(input, 'Invalid email address.');
+                inputError(input, 'Please enter a valid email address.');
                 form.querySelector('.input-error input').focus();
                 return;
             }
